@@ -1,7 +1,6 @@
 ﻿using Discord.Interactions;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
-using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
 namespace ReneeBot.Services

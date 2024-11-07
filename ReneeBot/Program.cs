@@ -10,7 +10,7 @@ namespace ReneeBot
     class Program
     {
         // setup our fields we assign later
-        private readonly IConfiguration _config;
+        private static IConfiguration _config;
         private DiscordSocketClient _client;
         private InteractionService _commands;
         private ulong _testGuildId;
@@ -109,6 +109,7 @@ namespace ReneeBot
             };
 
             return new ServiceCollection()
+                .AddSingleton<IConfiguration>(_config)
                 // Create the DiscordSocketClient with the specified config
                 .AddSingleton(new DiscordSocketClient(config))
 
